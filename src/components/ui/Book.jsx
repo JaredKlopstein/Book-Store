@@ -5,22 +5,24 @@ import Price from './Price'
 
 export default function Book( {book} ) {
   const [img, setImg] = useState();
-
   const mountedRef = useRef(true);
 
+  console.log(mountedRef)
   useEffect(() => {
     const image = new Image()
     image.src = book.url;
     image.onload = () => {
       setTimeout(() => {
-        if(mountedRef.current)
-        setImg(image)
+        if(!mountedRef.current){
+          setImg(image)
+        }
       },200)
     };
     return () => {
       mountedRef.current = false;
     }
   })
+
   return (
     <div className="book">
       {
@@ -28,7 +30,7 @@ export default function Book( {book} ) {
           <>
               <Link to={`/books/${book.id}`}>
         <figure className="book__img--wrapper">
-            <img src={book.url} alt=""/>
+            <img src={img.src} alt=""/>
         </figure>
     </Link>
     <div className="book__title">
