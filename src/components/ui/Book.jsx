@@ -7,7 +7,6 @@ export default function Book( {book} ) {
   const [img, setImg] = useState();
   const mountedRef = useRef(true);
 
-  console.log(mountedRef)
   useEffect(() => {
     const image = new Image()
     image.src = book.url;

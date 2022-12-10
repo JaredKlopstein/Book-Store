@@ -63,7 +63,7 @@ export default function Cart({cart, changeQuantity, removeItem}) {
               </div>
             {cart.length <= 0 && <div className="cart__empty">
                 <img src={EmptyCart} alt="" className="cart__empty--img"/>
-                <h2>You don't have any books in your cart!</h2>
+                <h2>Your cart is empty! Check out our selection of books</h2>
                 <Link to="/books">
                 <button className="btn">Browse Books</button>
                 </Link>
@@ -82,12 +82,9 @@ export default function Cart({cart, changeQuantity, removeItem}) {
                 <span>Total</span>
                 <span>${(+subTotal() + (subTotal() * .05)).toFixed(2)}</span>
               </div>
-              <button
-                className="btn btn__checkout no-cursor"
-                onClick={() => alert("Checkout not implemented yet")}
-              >
-                Proceed to Checkout
-              </button>
+              <Link to={'/checkout'} className="book_link">
+                  <button className="btn">Proceed to Checkout</button>
+                    </Link>
             </div>}
           </div>
         </div>

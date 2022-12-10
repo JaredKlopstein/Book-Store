@@ -58,7 +58,7 @@ li {
 
 h1 {
   font-size: 56px;
-  color: #7342d6;
+  color: #94c5cc;
   margin-bottom: 24px;
   text-align: center;
 }
@@ -78,7 +78,7 @@ button:active {
 }
 
 .btn {
-  background-color: #7342d6;
+  background-color: #b4d2e7;
   color: white;
   padding: 12px 24px;
   font-size: 20px;
@@ -87,7 +87,7 @@ button:active {
 }
 
 .purple {
-  color: #7342d6;
+  color: #b4d2e7;
 }
 
 .logo {
@@ -124,7 +124,7 @@ button:active {
 }
 
 .nav__link--primary {
-  border: 2px solid #7342d6;
+  border: 2px solid #94c5cc;
   border-radius: 4px;
 }
 
@@ -136,7 +136,7 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #7342d6;
+  color: #94c5cc;
   font-size: 20px;
   position: relative;
   margin-left: 8px;
@@ -162,13 +162,13 @@ button:active {
   background-color: transparent;
   font-size: 32px;
   border: none;
-  color: #7342d6;
+  color: #94c5cc;
   display: none;
 }
 
 .menu__backdrop {
   position: absolute;
-  background-color: #242424;
+  background-color: #a1a6b4;
   top: 0;
   left: 0;
   width: 100vw;
@@ -205,7 +205,7 @@ button:active {
 }
 
 .menu__link {
-  color: white;
+  color: 000000;
   font-size: 40px;
 }
 

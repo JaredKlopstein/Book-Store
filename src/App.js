@@ -8,6 +8,7 @@ import BooksInfo from './pages/BooksInfo.jsx';
 import { books } from './data'
 import Cart from './pages/Cart.jsx';
 import { useEffect, useState } from 'react';
+import Checkout from './pages/Checkout.jsx'
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -40,7 +41,6 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(cart);
   }, [cart])
 
   return (
@@ -52,6 +52,7 @@ function App() {
         <Route path="/books" element={<Books books={books}></Books>} />
         <Route path="/books/:id" element={<BooksInfo books={books} addToCart={addToCart} cart={cart}/>} />
         <Route path="/cart" element={<Cart books={books} cart={cart} changeQuantity={changeQuantity} removeItem={removeItem}/>} />
+        <Route path="/checkout" element={<Checkout cart={cart}></Checkout>}></Route>
       </Routes>
       <Footer />
     </div>
